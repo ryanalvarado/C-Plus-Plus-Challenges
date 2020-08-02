@@ -1,39 +1,26 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 // #include <iomansip>
 using namespace std;
 
-/*
- 
- http://www.cplusplus.com/forum/general/81012/
- 
- 
-  https://jesushilarioh.com/chapter-6-6-kinetic-energy-tony-gaddis-starting-out-with-c-plus-plus/
-
-Write kineticEnergy function that accepts arguments:
-    cin Mass (in kg)
-    cin Velocity (in m/s)
- 
-Function returns kinetic energy of object.
+/* CHALLENGE:
+ In physics, an object that is in motion is said to have kinetic energy.  The following formula can be used to determined a moving object's kinetic energy:
 
  KE = 1/2 * mv2
 
-  KE   kinetic energy,
-  m    object's mass in kilograms
-  v    object's velocity, in meters/second
+ The variables in the formula are as follows:  KE is the kinetic energy, m is the object's mass in kilograms, and v is the object's velocity, in meters per second.
 
- 
-
-*/
-
-// Global
+ Write a function named kineticEnergy that accepts an object's mass (in kg) and velocity (in m/s) as arguments.  The function should return the amount of kinetic energy that the object has.  Demonstrate the function by calling it in a program that asks the user to enter values for mass and velocity.
+ */
 
 // Prototypes
-double kineticEnergy(double, double);
-void display(double, double, double);
+void KEfunction(double, double);
+void displayKE(double, double);
 
 
-
+// Global variable
+double keneticEnergyTotal;
 
 int main()
 {
@@ -42,15 +29,15 @@ int main()
            mass,
            velocity;
     
-    cout << "Enter the object's mass: ";
+    cout << "Enter the object's mass (kg): ";
     cin >> mass;
     
-    cout << "\nEnter the object's velocity: ";
+    cout << "\nEnter the object's velocity (m/s): ";
     cin >> velocity;
     
     // Calls
-    kineticEnergy(mass, velocity, keneticEnergy);
-    display(
+    KEfunction(mass, velocity);
+    displayKE(mass, velocity);
     
     return 0;
 }
@@ -58,9 +45,19 @@ int main()
 
 
 
-// Function
-double kineticEnergy(double mass, double velocity, double keneticEnergy)
+// Function to calculate kenetic energy
+void KEfunction(double mass, double velocity)
     {
         
-        return (0.5) * mass * pow(velocity, 2);
+        keneticEnergyTotal = (0.5) * mass * pow(velocity, 2);
+    }
+
+
+
+// Function to display calculation
+void displayKE(double mass, double velocity)
+    {
+        cout << setprecision(2) << fixed << right << endl;
+        cout << "The kenetic emergy is: ";
+        cout << keneticEnergyTotal << endl << endl;
     }

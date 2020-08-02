@@ -1,0 +1,8 @@
+	Sales Bar Chart	
+
+Each asterisks represents $100:
+Store 1: *********
+Store 2: **
+Store 3: *****
+Store 4: *
+Store 5: *****

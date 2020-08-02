@@ -3,22 +3,10 @@
 #include <cmath>
 using namespace std;
 
-/*
- Asks for
- the principal
- the interest rate,
- number of times the interest is compounded.
- 
- 
- Balance in savings acct after 1 year calculation:
+/* CHALLENGE:
+ The volume of a sphere is V = (4.0/3.0)πr3 and the surface area is A = 4.0πr2, where r is the radius of the sphere.  Given the radius (user input), design a program that computes the volume and surface area of the sphere.  Assume the value of π = 3.141592.
 
   Amount = Principal x (1 + Rate / T)T
-
-Principal balance = savings acct balance
-Rate = interest rate
-T = number of times the interest is compounded during a year
-T is 4 if the interest is compounded quarterly
-
 
 */
  
